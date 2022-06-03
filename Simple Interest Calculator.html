@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    <title>Simple Interest Calculator</title>
+    <script>
+        function calculate()
+        {
+            principle = document.getElementById("principle").value;
+            years = document.getElementById("years").value;
+            interestrate = document.getElementById("interestrate").value;
+            result = document.getElementById("result");
+            
+            result.innerHTML = "The interest is " + (principle*years*interestrate/100);
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Simple Interest Calculator:</h1> <br>
+        Amount: <input type="number" id="principle"><br/>
+        InterestRate: <input type="number" id="interestrate"><br/>
+        Number of Years: <input type="number" id="years"><br/>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </body>
+</html>
